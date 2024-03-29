@@ -44,6 +44,7 @@ public class MontyHallSimulationTest {
     public void testInvalidPlayerChoice() {
         MontyHallSimulation simulation = new MontyHallSimulation();
 
+        //почему Вы тут ожидаете IllegalArgumentException?
         assertThrows(IllegalArgumentException.class, () -> {
             simulation.simulateGame();
             simulation.setWinsWithoutSwitching(-1); // Попытка установить отрицательное значение
@@ -54,6 +55,7 @@ public class MontyHallSimulationTest {
     public void testInvalidRevealedDoor() {
         MontyHallSimulation simulation = new MontyHallSimulation();
 
+        //почему Вы тут ожидаете IllegalArgumentException?
         assertThrows(IllegalArgumentException.class, () -> {
             simulation.simulateGame();
             simulation.setWinsWithSwitching(1001); // Попытка установить значение больше 1000
@@ -64,6 +66,7 @@ public class MontyHallSimulationTest {
     public void testInvalidFinalChoice() {
         MontyHallSimulation simulation = new MontyHallSimulation();
 
+        //почему Вы тут ожидаете IllegalArgumentException?
         assertThrows(IllegalArgumentException.class, () -> {
             simulation.simulateGame();
             simulation.setWinsWithoutSwitching(1500); // Попытка установить значение больше 1000
